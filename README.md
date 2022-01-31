@@ -29,6 +29,23 @@ NETWORK ID     NAME                DRIVER    SCOPE
 owezpbfwk750   wordpress_default   overlay   swarm
 ```
 
+## Checking the services
+
+```
+$ docker service ls
+ID             NAME             MODE         REPLICAS   IMAGE              PORTS
+vmbkmj4rod1t   wordpress_blog   replicated   1/1        wordpress:latest   *:8082->80/tcp
+m5zwzf9mrwd7   wordpress_db     replicated   1/1        mariadb:latest
+```
+
+## Checking the stack
+
+```
+# docker stack ls
+NAME        SERVICES   ORCHESTRATOR
+wordpress   2          Swarm
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
