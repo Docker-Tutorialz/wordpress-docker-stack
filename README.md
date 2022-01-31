@@ -15,10 +15,18 @@ pip install foobar
 To deploy the stack please proceed with the command below:
 
 ```shell
-# docker stack deploy -c docker-compose.yml wordpress
+$ docker stack deploy -c docker-compose.yml wordpress
 Creating network wordpress_default
 Creating service wordpress_blog
 Creating service wordpress_db
+```
+
+## Checkng the network
+
+```shell
+$ docker network ls
+NETWORK ID     NAME                DRIVER    SCOPE
+owezpbfwk750   wordpress_default   overlay   swarm
 ```
 
 ## Contributing
