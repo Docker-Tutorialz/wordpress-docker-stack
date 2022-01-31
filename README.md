@@ -41,9 +41,27 @@ m5zwzf9mrwd7   wordpress_db     replicated   1/1        mariadb:latest
 ## Checking the stack
 
 ```
-# docker stack ls
+$ docker stack ls
 NAME        SERVICES   ORCHESTRATOR
 wordpress   2          Swarm
+```
+
+## Checking the stack on nodes of Swarm
+
+```
+$ docker stack ps wordpress
+ID             NAME               IMAGE              NODE       DESIRED STATE   CURRENT STATE               ERROR     PORTS
+j1nk21qrvyn1   wordpress_blog.1   wordpress:latest   elliot02   Running         Running about an hour ago
+3dm7g8jmlwyi   wordpress_db.1     mariadb:latest     elliot01   Running         Running about an hour ago
+```
+
+## Checkin the services on stack
+
+```
+$ docker stack services wordpress
+ID             NAME             MODE         REPLICAS   IMAGE              PORTS
+vmbkmj4rod1t   wordpress_blog   replicated   1/1        wordpress:latest   *:8082->80/tcp
+m5zwzf9mrwd7   wordpress_db     replicated   1/1        mariadb:latest
 ```
 
 ## Contributing
