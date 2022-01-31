@@ -4,17 +4,17 @@ When talking about Docker in production environments, Docker Compose is mainly u
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the documentation [Docker](https://docs.docker.com/engine/install/) to install Docker.
 
 ```bash
-pip install foobar
+$ curl -fsSl https://get.docker.com | bash
 ```
 
 ## Usage
 
 To deploy the stack please proceed with the command below:
 
-```shell
+```bash
 $ docker stack deploy -c docker-compose.yml wordpress
 Creating network wordpress_default
 Creating service wordpress_blog
@@ -23,7 +23,7 @@ Creating service wordpress_db
 
 ## Checkng the network
 
-```shell
+```bash
 $ docker network ls
 NETWORK ID     NAME                DRIVER    SCOPE
 owezpbfwk750   wordpress_default   overlay   swarm
@@ -31,7 +31,7 @@ owezpbfwk750   wordpress_default   overlay   swarm
 
 ## Checking the services
 
-```
+```bash
 $ docker service ls
 ID             NAME             MODE         REPLICAS   IMAGE              PORTS
 vmbkmj4rod1t   wordpress_blog   replicated   1/1        wordpress:latest   *:8082->80/tcp
@@ -40,7 +40,7 @@ m5zwzf9mrwd7   wordpress_db     replicated   1/1        mariadb:latest
 
 ## Checking the stack
 
-```
+```bash
 $ docker stack ls
 NAME        SERVICES   ORCHESTRATOR
 wordpress   2          Swarm
@@ -48,7 +48,7 @@ wordpress   2          Swarm
 
 ## Checking the stack on nodes of Swarm
 
-```
+```bash
 $ docker stack ps wordpress
 ID             NAME               IMAGE              NODE       DESIRED STATE   CURRENT STATE               ERROR     PORTS
 j1nk21qrvyn1   wordpress_blog.1   wordpress:latest   elliot02   Running         Running about an hour ago
@@ -57,7 +57,7 @@ j1nk21qrvyn1   wordpress_blog.1   wordpress:latest   elliot02   Running         
 
 ## Checkin the services on stack
 
-```
+```bash
 $ docker stack services wordpress
 ID             NAME             MODE         REPLICAS   IMAGE              PORTS
 vmbkmj4rod1t   wordpress_blog   replicated   1/1        wordpress:latest   *:8082->80/tcp
