@@ -1,4 +1,4 @@
-## `Docker Compose - Deploying two services on Swarm`
+## Docker Compose - Deploying two services on Swarm
 
 When talking about Docker in production environments, Docker Compose is mainly used, it is here in Compose that you code how your application should be deployed (services, volumes, networks). You can have n services (database, app, load balance) that Docker Compose will handle all this in a simple and organized way, that's because Compose uses YAML files and you can declaratively write your resources and thus upload your app quickly and efficiently.
 
