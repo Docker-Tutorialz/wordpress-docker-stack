@@ -4,7 +4,7 @@ When talking about Docker in production environments, Docker Compose is mainly u
 
 ## Installation
 
-Use the documentation [Docker Engine](https://docs.docker.com/engine/install/) to install Docker on your machine.
+Use the documentation [Docker Engine](https://docs.docker.com/engine/install/) to install Docker on your machine. Make sure you have a Swarm cluster to deploy the Stack.
 
 ```bash
 $ curl -fsSl https://get.docker.com | bash
