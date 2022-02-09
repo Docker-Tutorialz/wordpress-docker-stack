@@ -46,7 +46,7 @@ NAME        SERVICES   ORCHESTRATOR
 wordpress   2          Swarm
 ```
 
-## Checking the stack on nodes of Swarm
+## Checking the stack on nodes of Swarm cluster
 
 ```bash
 $ docker stack ps wordpress
